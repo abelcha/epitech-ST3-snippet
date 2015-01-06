@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+t_${1:list}      *init_root()
+{
+  t_${1:list}    *root;
+
+  if (!(root = malloc(sizeof(t_${1:list}))))
+    return (NULL);
+  root->name = NULL;
+  root->links = NULL;
+  root->prev = root;
+  root->next = root;
+  return (root);
+}
+]]></content>
+	<tabTrigger>init</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+void     add_elem(t_${1:list} *elem, t_${1:list} *newelem)
+{
+  newelem->prev = elem->prev;
+  newelem->next = elem;
+  elem->prev->next = newelem;
+  elem->prev = newelem;
+}
+]]></content>
+	<tabTrigger>add</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>

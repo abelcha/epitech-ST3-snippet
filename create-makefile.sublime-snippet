@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+RM	= rm -f
+
+SRC	= ${1:files}			\
+
+NAME	= ${1:this}
+
+CFLAGS	+= -I./
+
+#CFLAGS	+= -ansi -Wall -Wextra -Werror
+
+CC	= cc
+
+OBJ	= \$(SRC:.c=.o)
+
+all:	\$(NAME)
+
+\$(NAME):	\$(OBJ)
+	\$(CC) -o \$(NAME) \$(SRC)
+clean:
+	\$(RM) \$(OBJ)
+
+fclean:	clean
+	\$(RM) \$(NAME)
+
+re	: fclean all
+
+coffee : fclean all
+	\$(RM) *~ *#
+
+.PHONY: all clean fclean re
+]]></content>
+	<tabTrigger>make</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+typedef struct			s_${1:this}
+{
+
+}						t_${1:this};
+]]></content>
+	<tabTrigger>suc</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>

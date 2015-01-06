@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+typedef struct			s_${1:this}
+{
+  struct s_${1:this}		*prev;
+  struct s_${1:this}		*next;
+}						t_${1:this};
+]]></content>
+	<tabTrigger>list</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+</snippet>
